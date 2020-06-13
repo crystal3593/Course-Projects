@@ -19,3 +19,11 @@ This program will simulate a simple change maker for a vending machine. It will 
  ![VM1](/images/VM2.png)
  ![VM1](/images/VM3.png)
  ![VM1](/images/VM4.png)
+
+
+### 2. Tic Tac Toe
+Game Rules: [How to play Tic Tac Toe](https://www.exploratorium.edu/brain_explorer/tictactoe.html)
+* Sample run output:
+![TicTacToe](/images/Tic.png)
+
+### 3. 
