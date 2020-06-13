@@ -1,5 +1,5 @@
-## C++ Project's Description
-### 1. Vending Machine Change Maker
+### Project's Description
+### Vending Machine Change Maker
 This program will simulate a simple change maker for a vending machine. It will start with a stock of coins and dollars. It will then repeatedly request the price for an item to be purchased or to quit.
 * It only accepts nickels, dimes, quarters, one-dollar and five-dollar bills
 * When the user has deposited enough to cover the cost of the item, the program will calculate the coins to be dispensed in change. Alternately, the user can cancel the purchase up until full payment has been deposited, in which case, your program will calculate the coins to be dispensed to refund any partial payment already deposited.
@@ -19,11 +19,3 @@ This program will simulate a simple change maker for a vending machine. It will 
  ![VM1](/images/VM2.png)
  ![VM1](/images/VM3.png)
  ![VM1](/images/VM4.png)
-
-
-### 2. Tic Tac Toe
-Game Rules: [How to play Tic Tac Toe](https://www.exploratorium.edu/brain_explorer/tictactoe.html)
-* Sample run output:
-![TicTacToe](/images/Tic.png)
-
-### 3. 

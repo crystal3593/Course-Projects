@@ -1,10 +1,6 @@
-//
 //  main.cpp
-//  HW1_CS201
-//
 //  Created by crystal on 2019/2/15.
 //  Copyright © 2019 crystal. All rights reserved.
-//
 
 #include <iostream>
 #include <string>
@@ -35,8 +31,6 @@ void print_stock()
 }
 
 
-
-
 void print_menu()
 {
     cout<<"Menu for deposits: "<<endl;
@@ -49,17 +43,13 @@ void print_menu()
 }
 
 
-
-
-
-
 int main()
 {
     cout<<"Welcome to the vending machine change maker program"<<endl;
     cout<<"Change maker initialized."<<endl;
     print_stock();
-    
-    
+
+
     while(1)
     {
         cout<<"Enter the purchase price (XX.XX) or \'q\' to quit: "<<endl;
@@ -71,12 +61,12 @@ int main()
             cout<<"Total: "<<total/100<<" dollars and "<<total%100<<" cents"<<endl;
             break;
         }
-        
+
         //convert datatype from string to double
         stringstream num(user_input);
         double x=0.0;
         num >> x;
-        
+
         //calculate the total cents
         int total_cents = x * 100;
         int original_cents = total_cents;
@@ -86,18 +76,18 @@ int main()
             cout<<"Illegal price: Must be a non-nagetive multiple of 5 cents."<<endl<<endl;
             continue;
         }
-        
+
         print_menu();
-        
+
         while(total_cents>0)
         {
             string deposit;
-            
+
             cout<<"Payment due: "<<total_cents/100<<" dollars and ";
             cout<<total_cents%100<<" cents"<<endl;
             cout<<"Indicate your deposit: ";
             cin>>deposit;
-            
+
             if(deposit=="n")
             {
                 total_cents = total_cents - NICKEL;
@@ -131,10 +121,10 @@ int main()
             else
                 cout<<"Illegal selection: "<<deposit<<endl;
         }
-        
+
         //print out the change info
         total_cents *= (-1);
-    
+
         cout<<"\nPlease take the change below."<<endl;
         if(total_cents == 0)
         {
@@ -142,9 +132,9 @@ int main()
             print_stock();
             continue;
         }
-        
-        
-        
+
+
+
         int quarterNeed = total_cents/QUARTER;
         if(quarterNeed <= quarters && quarterNeed!=0 )
         {
@@ -158,9 +148,9 @@ int main()
             cout<<quarters<<" quarters"<<endl;
             quarters = 0;
         }
-    
-    
-    
+
+
+
         int dimeNeed = total_cents/DIME;
         if(dimeNeed <= dimes && dimeNeed!=0 )
         {
@@ -191,9 +181,9 @@ int main()
             nickels = 0;
         }
 
- 
 
-        
+
+
         if(total_cents>0)
         {
             cout<<"Machine is out of change"<<endl;
@@ -207,6 +197,6 @@ int main()
         }
         print_stock();
     }
-    
+
     return 0;
 }
